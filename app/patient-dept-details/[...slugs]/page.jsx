@@ -1,7 +1,7 @@
 "use client"
 import { title } from "@/components/primitives";
 import { supabase } from '../../supadb.js';
-
+import {Accordion, AccordionItem} from "@nextui-org/react";
 import { useEffect, useState } from 'react';
 
 
@@ -34,23 +34,24 @@ const department=params.slugs[1];
         {patientlist.map((org, index) => (
           <div key={index} className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
            
-            <div className="px-5 pb-5">
-              <a href="#">
-                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{org.floating_name}</h5>
-              </a>
-              <p className="text-gray-700 dark:text-gray-300 mt-2">{org.floating_dob}</p>
-              <div className="flex items-center justify-between mt-5">
-                <span className="text-sm text-gray-600 dark:text-gray-400">{org.floating_patient_id}</span>
-                <span className="text-sm text-gray-600 dark:text-gray-400">{org.floating_description_name}</span>
-              </div>
-              <div className="flex items-center justify-between mt-5">
-                <span className="text-sm text-gray-600 dark:text-gray-400">{org.floating_time}</span>
-                <span className="text-sm text-gray-600 dark:text-gray-400">{org.floating_blood_group}</span>
-                <span className="text-sm text-gray-600 dark:text-gray-400">{org.floating_medical_description}</span>
-                <span className="text-sm text-gray-600 dark:text-gray-400">{org.floating_department}</span>
-             
-              </div>
-               </div>
+           
+               
+
+<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    
+    <div className="p-5">
+        <a href="#">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{org.floating_description_name}</h5>
+        </a>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{org.floating_medical_description}</p>
+        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        {org.floating_time}
+            
+        </a>
+    </div>
+</div>
+
+
           </div>
         ))}
       </div>
