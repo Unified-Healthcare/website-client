@@ -12,6 +12,12 @@ import { QrReader } from 'react-qr-reader';
 
 export default function Home() {
 	const [data, setData] = useState('No result');
+	const [facingMode, setFacingMode] = useState('environment');
+	const toggleFacingMode = () => {
+		setFacingMode((prevFacingMode) =>
+		  prevFacingMode === 'environment' ? 'user' : 'environment'
+		);
+	  };
 	return (<>
 		<section className="bg-white dark:bg-gray-900">
     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -22,6 +28,7 @@ export default function Home() {
         </div>
         <div className=" lg:mt-0 lg:col-span-5 ">
 		<QrReader
+		facingMode={facingMode}
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
@@ -33,8 +40,11 @@ export default function Home() {
         }}
         style={{ width: '100%' }}
       />
-      
-        </div>            
+      <button onClick={toggleFacingMode}>
+        Switch Camera ({facingMode === 'environment' ? 'Front' : 'Back'})
+      </button>
+        </div>   
+		<br />         
 		<p>{data}</p>
     </div>
 </section>
