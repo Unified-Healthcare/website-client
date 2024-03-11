@@ -17,7 +17,7 @@ export default function Home() {
         // handle decoded results here
 		setDecodedResult(decodedResult);
 		setDecodedText(decodedText);
-        router.push(/patient-details-genearal/+decodedText)
+        router.push(/patient-details-general/+decodedText)
 
     };
 	return (<>
