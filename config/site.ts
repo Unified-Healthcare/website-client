@@ -9,55 +9,28 @@ export const siteConfig = {
 			href: "/",
 		},
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Department Update",
+      href: "/department-update",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Patient Creation",
+      href: "/patient-create",
     },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
+
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "Home",
+			href: "/",
 		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
+    {
+      label: "Department Update",
+      href: "/department-update",
+    },
+    {
+      label: "Patient Creation",
+      href: "/patient-create",
+    },
 	],
 	links: {
 		github: "https://github.com/nextui-org/nextui",
