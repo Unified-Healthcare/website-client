@@ -35,6 +35,7 @@ export default function Home() {
                 qrCodeSuccessCallback={onNewScanResult}
             />
       
+	  
         </div>            
 		<p>{JSON.stringify(decodedText)}</p>
 		<p>{JSON.stringify(decodedResult)}</p>
